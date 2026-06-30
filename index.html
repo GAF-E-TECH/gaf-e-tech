@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAF E-TECH</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: white;
+        }
+        header {
+    background: #1e3a8a;
+    padding: 20px;
+    text-align: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+        h1 {
+            margin: 0;
+        }
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+        .btn {
+            background: #22c55e;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav {
+    margin-top: 20px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #22c55e;
+}
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+.produits {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.produits h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    background: #22c55e;
+    transform: translateY(-5px);
+}
+.produits {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0f172a;
+}
+
+.produits h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: #1e293b;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border: 1px solid #22c55e;
+    background: #111827;
+}
+.services {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0b1220;
+}
+
+.services h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: white;
+}
+#contact {
+    padding: 80px 20px;
+    text-align: center;
+    background: #1e293b;
+    color: white;
+}
+
+#contact h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#contact .btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #22c55e;
+}
+
+#contact .btn:hover {
+    background: #16a34a;
+}
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    text-decoration: none;
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+}
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #22c55e;
+}
+#devis {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0f172a;
+    color: white;
+}
+
+#devis form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#devis input,
+#devis textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+#devis button {
+    padding: 12px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#devis button:hover {
+    background: #16a34a;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #22c55e;
+}
+header {
+    background: #1e3a8a;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Conteneur principal */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Titre centré */
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+/* Menu */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #22c55e;
+}
+
+/* Slogan */
+.slogan {
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+
+<header>
+
+    <div class="header-container">
+
+        <div class="logo">
+            <img src="logo.png" alt="GAF E-TECH Logo">
+        </div>
+
+        <h1 class="title">GAF E-TECH</h1>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#produits">Produits</a>
+            <a href="#marques">Marques</a>
+            <a href="#services">Services</a>
+            <a href="#devis">Devis</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
+
+    <p class="slogan">Solutions en électricité industrielle et maintenance</p>
+
+</header>
+
+<section>
+    <section class="hero" id="accueil">
+   <h2>GAF E-TECH</h2>
+
+<p>
+    Solutions professionnelles en électricité industrielle, maintenance,
+    automatisme et fourniture de matériels industriels au Bénin.
+</p>
+
+<div style="margin-top:20px;">
+    <a class="btn" href="#produits">Voir nos produits</a>
+    <a class="btn" href="#contact" style="background:#1e3a8a; margin-left:10px;">
+        Nous contacter
+    </a>
+</div>
+
+<div style="margin-top:30px; font-size:16px;">
+    ✔ Intervention rapide<br>
+    ✔ Expertise industrielle<br>
+    ✔ Matériels de qualité<br>
+    ✔ Assistance technique
+</div>
+
+<section class="produits" id="produits">
+
+    <h2>Nos Produits Industriels</h2>
+
+    <div class="grid">
+
+        <div class="card">⚡ Contacteurs</div>
+        <div class="card">🔌 Disjoncteurs moteurs</div>
+        <div class="card">⚙️ Variateurs de vitesse</div>
+        <div class="card">🤖 Automates programmables</div>
+        <div class="card">📡 Capteurs industriels</div>
+        <div class="card">🔋 Câbles électriques</div>
+        <div class="card">⚙️ Moteurs électriques</div>
+        <div class="card">🔩 Roulements industriels</div>
+
+    </div>
+
+    <h2 style="margin-top:60px;">Nos Marques</h2>
+
+    <div class="grid">
+
+        <div class="card">Schneider Electric</div>
+        <div class="card">Siemens</div>
+        <div class="card">ABB</div>
+        <div class="card">Omron</div>
+        <div class="card">Legrand</div>
+        <div class="card">WEG</div>
+
+    </div>
+
+</section>
+<section class="services" id="services">
+
+    <h2>Nos Services</h2>
+
+    <div class="grid">
+
+        <div class="card">🛒 Vente des équipements électriques industriels</div>
+
+        <div class="card">🔧 Maintenance électrique industrielle</div>
+        <div class="card">🏭 Installation industrielle</div>
+        <div class="card">⚙️ Automatisme industriel</div>
+        <div class="card">🚨 Dépannage et intervention rapide</div>
+        <div class="card">📐 Études techniques et conseils</div>
+
+    </div>
+
+</section>
+<section id="contact">
+
+    <h2>Contactez-nous</h2>
+
+    <p>📞 Téléphone : +229 01 94 73 33 97</p>
+    <p>📧 Email : gafetech@gmail.com</p>
+
+    <br>
+
+    <a class="btn" href="https://wa.me/2290194733397" target="_blank">
+        💬 Nous écrire sur WhatsApp
+    </a>
+
+</section>
+<a href="https://wa.me/2290194733397" class="whatsapp-float" target="_blank">
+    💬
+</a>
+<section id="devis">
+
+    <h2>Demande de devis</h2>
+
+    <form onsubmit="sendWhatsApp(); return false;">
+
+    <input type="text" id="nom" placeholder="Nom complet" required>
+
+    <input type="tel" id="tel" placeholder="Numéro de téléphone" required>
+
+    <input type="email" id="email" placeholder="Adresse email" required>
+
+    <textarea id="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
+
+    <button type="submit">Envoyer via WhatsApp</button>
+
+</form>
+
+</section>
+<script>
+function sendWhatsApp() {
+
+    let nom = document.getElementById("nom").value;
+    let tel = document.getElementById("tel").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let texte = "Bonjour GAF E-TECH" +
+                "Nom: " + nom + " " +
+                "Téléphone: " + tel + " " +
+                "Email: " + email + " " +
+                "Besoin: " + message;
+
+    let url = "https://wa.me/2290194733397?text=" + encodeURIComponent(texte);
+
+    window.open(url, "_blank");
+}
+</script>
+</body>
+</html>
