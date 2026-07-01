@@ -436,6 +436,48 @@ nav a:hover {
         padding: 20px;
     }
 }
+/* =========================
+   CORRECTION MOBILE CHEVAUCHEMENT HEADER
+========================= */
+@media (max-width: 768px) {
+
+    header {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .title {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .slogan {
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+}
+@media (max-width: 768px) {
+
+    nav {
+        top: 0;
+        z-index: 2000;
+    }
+
+    body {
+        padding-top: 120px;
+    }
+}
     </style>
 </head>
 <body>
