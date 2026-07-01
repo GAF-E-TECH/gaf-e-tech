@@ -376,6 +376,66 @@ nav a:hover {
         padding: 20px;
     }
 }
+/* =========================
+   MOBILE - PORTRAIT
+========================= */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding-right: 0;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        justify-content: right;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+}
+/* =========================
+   MOBILE - PAYSAGE (téléphone tourné)
+========================= */
+@media (max-width: 900px) and (orientation: landscape) {
+
+    body {
+        font-size: 13px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        justify-content: right;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    nav a {
+        font-size: 11px;
+        margin: 4px;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
     </style>
 </head>
 <body>
