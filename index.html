@@ -478,8 +478,60 @@ nav a:hover {
         padding-top: 120px;
     }
 }
+#devis {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+#devis form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#devis input,
+#devis textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#devis button {
+  background: #0a66c2;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#devis button:hover {
+  background: #084a91;
+}
     </style>
 </head>
+<script>
+function envoyerWhatsApp() {
+
+  let nom = document.getElementById("nom").value;
+  let telephone = document.getElementById("telephone").value;
+  let email = document.getElementById("email").value;
+  let besoin = document.getElementById("besoin").value;
+
+  let message =
+`Bonjour GAF E-TECH
+Nom: ${nom}
+Téléphone: ${telephone}
+Email: ${email}
+Besoin: ${besoin}`;
+
+  let url = "https://wa.me/2290194733397?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
 <body>
 
 <header>
@@ -595,23 +647,27 @@ nav a:hover {
     💬
 </a>
 <section id="devis">
+  <h2>Demande de devis</h2>
 
-    <h2>Demande de devis</h2>
+  <form id="devisForm">
+    
+    <label>Nom</label>
+    <input type="text" id="nom" required>
 
-    <form onsubmit="sendWhatsApp(); return false;">
+    <label>Téléphone</label>
+    <input type="tel" id="telephone" required>
 
-    <input type="text" id="nom" placeholder="Nom complet" required>
+    <label>Email</label>
+    <input type="email" id="email" required>
 
-    <input type="tel" id="tel" placeholder="Numéro de téléphone" required>
+    <label>Besoin</label>
+    <textarea id="besoin" rows="5" required></textarea>
 
-    <input type="email" id="email" placeholder="Adresse email" required>
+    <button type="button" onclick="envoyerWhatsApp()">
+      Envoyer sur WhatsApp
+    </button>
 
-    <textarea id="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
-
-    <button type="submit">Envoyer via WhatsApp</button>
-
-</form>
-
+  </form>
 </section>
 <script>
 function sendWhatsApp() {
