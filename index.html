@@ -511,6 +511,12 @@ nav a:hover {
   background: #084a91;
 }
     </style>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("py0iXPMadihxkdsZX");
+  })();
+</script>
 </head>
 <script>
 function envoyerWhatsApp() {
@@ -650,7 +656,7 @@ Besoin: ${besoin}`;
   <h2>Demande de devis</h2>
 
   <form id="devisForm">
-    
+
     <label>Nom</label>
     <input type="text" id="nom" required>
 
@@ -663,8 +669,8 @@ Besoin: ${besoin}`;
     <label>Besoin</label>
     <textarea id="besoin" rows="5" required></textarea>
 
-    <button type="button" onclick="envoyerWhatsApp()">
-      Envoyer sur WhatsApp
+    <button type="button" onclick="envoyerDevis()">
+      Envoyer la demande
     </button>
 
   </form>
@@ -686,6 +692,45 @@ function sendWhatsApp() {
     let url = "https://wa.me/2290194733397?text=" + encodeURIComponent(texte);
 
     window.open(url, "_blank");
+}
+</script>
+<script>
+function envoyerDevis() {
+
+  let nom = document.getElementById("nom").value;
+  let telephone = document.getElementById("telephone").value;
+  let email = document.getElementById("email").value;
+  let besoin = document.getElementById("besoin").value;
+
+  let templateParams = {
+    nom: nom,
+    telephone: telephone,
+    email: email,
+    besoin: besoin
+  };
+
+  emailjs.send("service_3u2kxdq", "template_ar7qlp8", templateParams)
+  .then(function() {
+
+    let message =
+`Bonjour GAF E-TECH
+Nom: ${nom}
+Téléphone: ${telephone}
+Email: ${email}
+Besoin: ${besoin}`;
+
+    let url = "https://wa.me/2290194733397?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+
+    alert("Demande envoyée avec succès ✔");
+
+    document.getElementById("devisForm").reset();
+
+  }, function(error) {
+    alert("Erreur lors de l'envoi, réessaye.");
+  });
+
 }
 </script>
 </body>
