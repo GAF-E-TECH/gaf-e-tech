@@ -181,3 +181,41 @@ section {
     font-size: 26px;
     text-decoration: none;
 }
+/* =========================
+   ANIMATIONS GLOBALES
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation appliquée aux sections */
+section {
+    animation: fadeIn 0.8s ease-out;
+}
+/* Animation des cartes */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+header {
+    animation: fadeIn 1s ease-out;
+}
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
