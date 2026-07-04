@@ -170,7 +170,7 @@ section {
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 0px;
     background: none;
     width: 60px;
     height: 60px;
@@ -182,8 +182,8 @@ section {
     text-decoration: none;
 }
 .whatsapp-float img {
-    width: 35px;
-    height:35px;
+    width: 40px;
+    height:40px;
     display: block;
 }
 /* =========================
