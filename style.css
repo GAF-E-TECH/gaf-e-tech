@@ -261,3 +261,37 @@ header {
     margin: 8px 0;
     color: #e5e7eb;
 }
+/* =========================
+   BOUTON PRODUIT
+========================= */
+
+.produit-item{
+    margin:10px 0;
+}
+
+.produit-btn{
+    background:#1e3a8a;
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.produit-btn:hover{
+    background:#2563eb;
+}
+
+/* Image du produit */
+
+.produit-image{
+    display:block;
+    width:100%;
+    max-width:450px;
+    margin:15px auto;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
