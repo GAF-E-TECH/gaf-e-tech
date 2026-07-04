@@ -367,3 +367,73 @@ header {
         height: 35px;
     }
 }
+/* =========================
+   MENU HAMBURGER
+========================= */
+
+.menu-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2000;
+}
+
+/* bouton 3 traits */
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    background: #1e3a8a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    user-select: none;
+}
+
+/* menu caché par défaut */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #102764;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* liens */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-menu a:last-child {
+    border-bottom: none;
+}
+
+.nav-menu a:hover {
+    color: #22c55e;
+}
+
+/* menu actif */
+.nav-menu.active {
+    display: flex;
+}
+/* animation bouton hamburger */
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    background: #1e3a8a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    user-select: none;
+    transition: 0.3s;
+}
+
+/* effet quand actif */
+.menu-toggle.active {
+    background: #ef4444;
+    transform: rotate(90deg);
+}

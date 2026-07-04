@@ -27,3 +27,14 @@ function toggleSection(id) {
     }
 
 }
+function toggleMenu() {
+
+    const menu = document.getElementById("navMenu");
+    const icon = document.getElementById("menuToggle");
+
+    if (!menu || !icon) return;
+
+    menu.classList.toggle("active");
+
+    icon.textContent = menu.classList.contains("active") ? "✖" : "☰";
+}
