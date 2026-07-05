@@ -27,6 +27,7 @@ function toggleSection(id) {
     }
 
 }
+
 function toggleMenu() {
 
     const menu = document.getElementById("navMenu");
