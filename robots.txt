@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gaf-e-tech.github.io/gaf-e-tech/sitemap.xml
